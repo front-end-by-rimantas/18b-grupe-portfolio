@@ -13,7 +13,10 @@ Design: [Mitech portfolio template](https://demo.hasthemes.com/mitech-preview/in
 
 
 ## Project features
+- responsive design
 - repetitive content is generated/rendered;
+- multi-page
+- no AJAX
 
 ## Authors
 [Rimantas](https://github.com/belauzas)
