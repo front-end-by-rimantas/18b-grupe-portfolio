@@ -1,14 +1,19 @@
+import { isValidService } from './isValidService.js';
+
 function generateSingleService(service, imagePath) {
     // input validation
-    if (!service.active) {
+    if (!isValidService(service)) {
         return '';
     }
 
     // logic
+    // image alt text
     let imageAlt = service.imageAlt;
     if (!service.imageAlt || service.imageAlt === '') {
         imageAlt = service.title + ' image';
     }
+
+    // image validation
 
     const HTML = `<div class="services col-4 col-lg-6 col-sm-12">
                     <img src="${imagePath + service.image}" alt="${imageAlt}">
