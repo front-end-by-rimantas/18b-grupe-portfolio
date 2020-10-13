@@ -3,7 +3,7 @@
 // clients import
 // services import
 import { servicesData } from './data/services.js';
-import { renderServices } from './components/renderServices.js';
+import { renderServices } from './components/services/renderServices.js';
 
 
 // header logic
