@@ -1,8 +1,8 @@
 import { isValidService } from './isValidService.js';
 
-function generateSingleService(service, imagePath) {
+function generateSingleService(service, imagePath, showErrors = false) {
     // input validation
-    if (!isValidService(service, true)) {
+    if (!isValidService(service, showErrors)) {
         return '';
     }
 

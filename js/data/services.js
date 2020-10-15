@@ -5,7 +5,7 @@ const servicesData = {
         {
             image: 'service-1.png',
             imageAlt: 'Design image',
-            title: 'IT Design',
+            // title: 'IT Design',
             description: 'We provide the most responsive and functional IT design for companies and businesses worldwide.',
             link: '#',
             active: true

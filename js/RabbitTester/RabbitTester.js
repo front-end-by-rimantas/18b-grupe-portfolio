@@ -1,7 +1,12 @@
 class RabbitTester {
     constructor() {
+        this.title = '';
         this.count = 0;
         this.failed = [];
+    }
+
+    description(newTitle) {
+        this.title = newTitle;
     }
 
     addTest(calculated, expected) {
@@ -23,9 +28,9 @@ class RabbitTester {
     */
     run() {
         if (this.failed.length === 0) {
-            console.log(`%cIs valid service - valid: ${this.count}/${this.count}.`, 'color: green; font-weight: bold;');
+            console.log(`%c${this.title} - valid: ${this.count}/${this.count}.`, 'color: green; font-weight: bold;');
         } else {
-            console.log(`%cIs valid service - valid: ${this.count - this.failed.length}/${this.count}; failed: ${this.failed.length}/${this.count}.`, 'font-weight: bold;');
+            console.log(`%c${this.title} - valid: ${this.count - this.failed.length}/${this.count}; failed: ${this.failed.length}/${this.count}.`, 'font-weight: bold;');
 
             for (let i = 0; i < this.failed.length; i++) {
                 const fail = this.failed[i];

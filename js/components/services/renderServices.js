@@ -10,7 +10,7 @@ function renderServices(data) {
 
     for (let i = 0; i < servicesCount; i++) {
         const service = data.services[i];
-        HTML += generateSingleService(service, data.imagePath);
+        HTML += generateSingleService(service, data.imagePath, true);
     }
 
     // post logic validation

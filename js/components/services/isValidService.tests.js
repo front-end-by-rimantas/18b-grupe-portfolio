@@ -3,6 +3,8 @@ import { isValidService } from './isValidService.js';
 
 const rabbit = new RabbitTester();
 
+rabbit.description('Is valid service');
+
 rabbit.addTest(isValidService(), false);
 rabbit.addTest(isValidService(5), false);
 rabbit.addTest(isValidService('dsasd'), false);
