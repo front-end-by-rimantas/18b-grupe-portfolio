@@ -2,7 +2,7 @@ import { isValidService } from './isValidService.js';
 
 function generateSingleService(service, imagePath) {
     // input validation
-    if (!isValidService(service)) {
+    if (!isValidService(service, true)) {
         return '';
     }
 

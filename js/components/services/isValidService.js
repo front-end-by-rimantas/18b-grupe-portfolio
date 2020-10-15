@@ -1,5 +1,12 @@
-function isValidService(service) {
+function isValidService(service, showErrors = false) {
     let errors = [];
+
+    if (typeof service !== 'object') {
+        if (showErrors === true) {
+            console.error('ERROR: paslauga turi buti objektas.');
+        }
+        return false;
+    }
 
     if (typeof service.active !== 'boolean') {
         errors.push('ERROR: paslaugos aktyvumo statusas turi buti boolean tipo.');
@@ -51,8 +58,10 @@ function isValidService(service) {
     }
 
     if (errors.length > 0) {
-        for (let i = 0; i < errors.length; i++) {
-            console.error(errors[i])
+        if (showErrors === true) {
+            for (let i = 0; i < errors.length; i++) {
+                console.error(errors[i]);
+            }
         }
 
         return false;
