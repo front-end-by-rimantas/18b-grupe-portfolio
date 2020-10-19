@@ -1,8 +1,13 @@
 // header import
 // hero import
-// about import
+// clients import
+// services import
+import { servicesData } from './data/services.js';
+import { renderServices } from './components/services/renderServices.js';
 
 
 // header logic
 // hero logic
-// about logic
+// clients logic
+// services logic
+renderServices(servicesData);
