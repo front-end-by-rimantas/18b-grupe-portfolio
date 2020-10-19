@@ -18,6 +18,7 @@ class Header {
 
     /**
      * Generuoja viso header elemento HTML.
+     * @returns {string} Bendras header HTML
      */
     generateHTML() {
         const logo = new Logo(this.logo);
@@ -37,6 +38,7 @@ class Header {
 
     /**
      * Selector validacija ir DOM vietos radimas
+     * @returns {boolean} Ar validus selector ir atnaujina this.DOM reiksme
      */
     isValidSelector() {
         const DOM = document.querySelector(this.selector);
