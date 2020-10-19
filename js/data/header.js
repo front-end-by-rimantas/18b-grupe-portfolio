@@ -20,7 +20,7 @@ const headerData = {
             },
             {
                 name: 'ru',
-                fullName: 'Pyccku',
+                fullName: 'Pycckuu',
                 flag: 'ru-flag.jpg'
             },
         ]

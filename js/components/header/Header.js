@@ -1,4 +1,7 @@
 import { Logo } from './Logo.js';
+import { Menu } from './Menu.js';
+import { Search } from './Search.js';
+import { LanguagesSwitcher } from './LanguagesSwitcher.js';
 
 class Header {
     constructor(params) {
@@ -17,13 +20,19 @@ class Header {
      * Generuoja viso header elemento HTML.
      */
     generateHTML() {
-        const logo = new Logo();
+        const logo = new Logo(this.logo);
         const logoHTML = logo.generateHTML();
 
-        // const menu = new Menu();
-        // const menuHTML = menu.generateHTML();
+        const menu = new Menu(this.menu);
+        const menuHTML = menu.generateHTML();
 
-        return logoHTML;
+        const langs = new LanguagesSwitcher(this.langs);
+        const langsHTML = langs.generateHTML();
+
+        const search = new Search(this.search);
+        const searchHTML = search.generateHTML();
+
+        return logoHTML + menuHTML + langsHTML + searchHTML;
     }
 
     /**
