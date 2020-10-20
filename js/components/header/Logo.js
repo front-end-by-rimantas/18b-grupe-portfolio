@@ -34,7 +34,7 @@ class Logo {
             logo = this.mobile;
         }
         // TODO: reik atvaizduoti abi versijas, t.y. ir desktop img, ir mobile img (del responsive design)
-        return `<img src="${logo}" alt="Logo">`;
+        return `<img class="logo" src="${logo}" alt="Logo">`;
     }
 }
 

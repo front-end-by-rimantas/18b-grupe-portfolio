@@ -1,27 +1,34 @@
 const headerData = {
     selector: '#main_header',
+    ad: {
+        link: {
+            href: '/jobs',
+            text: 'Now hiring'
+        },
+        followingText: 'Are you a driven and motivated 1st Line IT Support Engineer?'
+    },
     logo: {
         desktop: './img/logo.png',
         mobile: './img/logo-mobile.png',
     },
     lang: {
         imgPath: './img/lang-flags/',
-        activeLang: 'en',
+        activeLang: 'de',
         langList: [
             {
                 name: 'en',
                 fullName: 'English',
-                flag: 'en-flag.jpg'
+                flag: 'en.png'
             },
             {
-                name: 'lt',
-                fullName: 'Lietuvių',
-                flag: 'lt-flag.jpg'
+                name: 'fr',
+                fullName: 'Francais',
+                flag: 'fr.png'
             },
             {
-                name: 'ru',
-                fullName: 'Pycckuu',
-                flag: 'ru-flag.jpg'
+                name: 'de',
+                fullName: 'Deutsch',
+                flag: 'de.png'
             },
         ]
     },

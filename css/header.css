@@ -1,0 +1,164 @@
+header {
+    background-color: #fff;
+    box-shadow: 0 0 20px #0003;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+    header .ad {
+        display: inline-block;
+        float: left;
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+        opacity: 1;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+        header .ad.remove {
+            opacity: 0;
+            height: 0;
+            padding: 0;
+        }
+    header .header-bottom {
+        display: inline-block;
+        float: left;
+        width: 100%;
+        padding: 0 20px;
+        position: sticky;
+        top: 0;
+    }
+        header .logo {
+            display: inline-block;
+            float: left;
+            height: 50px;
+            margin: 10px 0;
+        }
+        header .menu-content {
+            display: inline-block;
+            float: right;
+        }
+            header .menu-content > * + * {
+                margin-left: 30px;
+            }
+            header .menu-content > nav {
+                display: inline-block;
+                float: left;
+            }
+            header .menu-content > .lang-switch {
+                display: inline-block;
+                float: left;
+                position: relative;
+            }
+            header .menu-content > .search {
+                display: inline-block;
+                float: left;
+                width: 200px;
+                position: relative;
+                border-left: 1px solid #ccc;
+            }
+
+.ad > a {
+    display: inline-block;
+}
+.ad > p {
+    display: inline-block;
+}
+        
+nav > .menu-item {
+    display: inline-block;
+    float: left;
+}
+    nav > .menu-item + .menu-item {
+        margin-left: 30px;
+    }
+    nav > .menu-item > .top {
+        display: inline-block;
+        font-size: 20px;
+        line-height: 70px;
+    }
+        nav > .menu-item > .top > .name {
+            display: inline-block;
+            float: left;
+        }
+        nav > .menu-item > .top > .fa {
+            display: inline-block;
+            float: left;
+            margin-left: 5px;
+            line-height: inherit;
+        }
+    nav > .menu-item > .dropdown {
+        display: none;
+    }
+
+
+.lang-switch > .selected-lang {
+    display: inline-block;
+    line-height: 70px;
+    font-size: 20px;
+}
+    .lang-switch > .selected-lang > img {
+        display: inline-block;
+        float: left;
+        height: 24px;
+        margin: 23px 0;
+    }
+    .lang-switch > .selected-lang > .name {
+        display: inline-block;
+        float: left;
+        margin-left: 5px;
+    }
+    .lang-switch > .selected-lang > .fa {
+        display: inline-block;
+        float: left;
+        margin-left: 5px;
+        line-height: inherit;
+    }
+.lang-switch > .lang-list {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    min-width: 150px;
+    background-color: #fff;
+    font-size: 20px;
+    line-height: 40px;
+    box-shadow: 0 2px 8px #0008;
+}
+    .lang-switch:hover > .lang-list {
+        display: inline-block;
+    }
+    .lang-switch > .lang-list > .lang-item {
+        padding: 5px 10px;
+    }
+        .lang-switch > .lang-list > .lang-item:hover {
+            background-color: #eee;
+            cursor: pointer;
+        }
+        .lang-switch > .lang-list > .lang-item > img {
+            margin: 10px 0;
+            height: 20px;
+        }
+        .lang-switch > .lang-list > .lang-item > .name {
+
+        }
+
+.search > input {
+    line-height: 70px;
+    font-size: 20px;
+    padding: 0 40px 0 10px;
+    border: none;
+    outline: none
+}
+.search > .fa {
+    padding: 10px;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
