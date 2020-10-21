@@ -1,94 +1,35 @@
 class Menu {
-    constructor() {
+    constructor(params) {
+        this.data = params;
+    }
 
+    generateMenuItem() {
+
+    }
+
+    generateMenu(data) {
+        let HTML = '';
+        for (let item of data) {
+            HTML += `<div class="menu-item">
+                        <div class="top">
+                            <span class="name">${item.text}</span>
+                            ${!item.subMenu ? '' : '<span class="fa fa-angle-down"></span>'}
+                        </div>`;
+            if (item.subMenu) {
+                HTML += '<div class="dropdown">';
+                HTML += this.generateMenu(item.subMenu);
+                HTML += '</div>';
+            }
+            HTML += '</div>';
+        }
+        return HTML;
     }
 
     /**
      * Generuoja logo elemento HTML.
      */
     generateHTML() {
-        return `<nav>
-                    <div class="menu-item">
-                        <div class="top">
-                            <span class="name">Home</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <div class="dropdown">
-                            <div class="menu-item">
-                                <div class="top">
-                                    <span class="name">Infotechno</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="top">
-                                    <span class="name">Processing</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="top">
-                            <span class="name">Company</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <div class="dropdown">
-                            <div class="menu-item">
-                                <div class="top">
-                                    <span class="name">Infotechno</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="top">
-                                    <span class="name">Processing</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="top">
-                            <span class="name">Home</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <div class="dropdown">
-                            <div class="menu-item">
-                                <div class="top">
-                                    <span class="name">Infotechno</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="top">
-                                    <span class="name">Processing</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="top">
-                            <span class="name">Company</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <div class="dropdown">
-                            <div class="menu-item">
-                                <div class="top">
-                                    <span class="name">Infotechno</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                            </div>
-                            <div class="menu-item">
-                                <div class="top">
-                                    <span class="name">Processing</span>
-                                    <span class="fa fa-angle-down"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>`;
+        return `<nav>${this.generateMenu(this.data)}</nav>`;
     }
 }
 

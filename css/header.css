@@ -90,9 +90,12 @@ nav > .menu-item {
             margin-left: 5px;
             line-height: inherit;
         }
-    nav > .menu-item > .dropdown {
+    nav .menu-item > .dropdown {
         display: none;
     }
+        nav .menu-item:hover > .dropdown {
+            display: inline-block;
+        }
 
 
 .lang-switch > .selected-lang {
