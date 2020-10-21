@@ -6,6 +6,10 @@ import { Header } from './components/header/Header.js';
 // services import
 import { servicesData } from './data/services.js';
 import { renderServices } from './components/services/renderServices.js';
+// case studies
+import { caseStudiesData } from './data/case-studies.js';
+import { CaseStudies } from './components/case-studies/CaseStudies.js';
+import { Carousel } from './components/carousel/Carousel.js';
 
 
 // header logic
@@ -14,3 +18,8 @@ new Header(headerData);
 // clients logic
 // services logic
 renderServices(servicesData);
+// case studies
+new Carousel({
+    data: caseStudiesData,
+    renderEngine: CaseStudies
+});
