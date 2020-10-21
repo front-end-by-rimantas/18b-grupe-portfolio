@@ -39,6 +39,7 @@ class Header {
         return `${adHTML}
                 <div class="header-bottom">
                     ${logoHTML}
+                    <i class="fa fa-bars"></i>
                     <div class="menu-content">
                         ${menuHTML}
                         ${langsHTML}

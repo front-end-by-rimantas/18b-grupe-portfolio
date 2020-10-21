@@ -37,6 +37,13 @@ header {
             height: 50px;
             margin: 10px 0;
         }
+        header .fa-bars {
+            display: none;
+            float: right;
+            font-size: 32px;
+            padding: 0 10px;
+            line-height: 70px;
+        }
         header .menu-content {
             display: inline-block;
             float: right;
@@ -164,4 +171,24 @@ nav > .menu-item {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+    header .menu-content > nav {
+        display: none;
+    }
+    header .fa-bars {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 700px) {
+    header .menu-content > .lang-switch {
+        display: none;
+    }
+    header .menu-content > .search {
+        display: none;
+    }
 }
