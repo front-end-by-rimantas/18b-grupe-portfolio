@@ -1,0 +1,43 @@
+.carousel {
+    display: inline-block;
+    width: 100%;
+}
+    .carousel > .content {
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+    }
+        .carousel > .content > .list {
+            display: inline-block;
+        }
+            .carousel > .content > .list > * {
+                display: inline-block;
+                float: left;
+            }
+    .carousel > .actions {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+        .carousel > .actions > .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+            .carousel > .actions > .dot:hover {
+                background-color: #36f;
+                width: 14px;
+                height: 14px;
+                margin: 3px;
+            }
+            .carousel > .actions > .dot.active {
+                background-color: #36f;
+                width: 14px;
+                height: 14px;
+                margin: 3px;
+            }

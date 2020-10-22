@@ -1,0 +1,11 @@
+.case-study {
+    padding: 0 15px;
+}
+    .case-study > .spacing {
+        background-color: bisque;
+        padding: 100px 40px;
+        text-align: center;
+    }
+        .case-study > .spacing > .title {
+            
+        }

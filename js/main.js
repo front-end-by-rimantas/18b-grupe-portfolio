@@ -21,5 +21,6 @@ renderServices(servicesData);
 // case studies
 new Carousel({
     data: caseStudiesData,
-    renderEngine: CaseStudies
+    renderEngine: CaseStudies,
+    itemPerView: 2
 });
