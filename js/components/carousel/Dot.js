@@ -1,0 +1,5 @@
+class Dot {
+
+}
+
+export { Dot }

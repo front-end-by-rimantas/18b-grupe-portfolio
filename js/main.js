@@ -22,5 +22,5 @@ renderServices(servicesData);
 new Carousel({
     data: caseStudiesData,
     renderEngine: CaseStudies,
-    itemPerView: 2
+    breakpoints: [800, 1100]
 });
