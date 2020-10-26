@@ -1,11 +1,12 @@
 class Achievements {
     constructor(params) {
-        console.log(params);
         this.selector = params.selector;
         this.insertionPosition = params.insertionPosition || 'beforeend';
         this.data = params.data;
 
         this.DOM = null;
+        this.achievementsDOM = null;
+        this.achievementsValueDOM = null;
 
         this.init();
     }
@@ -35,22 +36,45 @@ class Achievements {
         for (let ach of this.data) {
             HTML += `<div class="achievement col-3 col-lg-6 col-sm-12">
                         <div class="title">${ach.title}</div>
-                        <div class="value">${ach.value}</div>
+                        <div class="value">0</div>
                         <div class="subtitle">${ach.subtitle}</div>
                     </div>`;
         }
 
         this.DOM.insertAdjacentHTML(this.insertionPosition, HTML);
+        this.achievementsDOM = this.DOM.querySelectorAll('.achievement');
+        this.achievementsValueDOM = this.DOM.querySelectorAll('.achievement > .value');
     }
 
     scrollAnimation() {
-        const achievements = this.DOM.querySelectorAll('.achievement');
         const screenBottomY = scrollY + innerHeight;
 
-        for (let ach of achievements) {
+        for (let i = 0; i < this.data.length; i++) {
+            const ach = this.achievementsValueDOM[i];
+
+            if (ach.dataset.run) {
+                continue;
+            }
             const achBottomY = ach.offsetTop + ach.offsetHeight;
             if (achBottomY < screenBottomY) {
-                console.log('Run counter...');
+                ach.dataset.run = true;
+
+                let currentValue = 0;
+                const finalValue = this.data[i].value;
+                const timeAmount = 1;                   // seconds
+                const fps = 24;                         // frames per second
+                let step = 0;
+                const totalSteps = timeAmount * fps;
+
+                const timer = setInterval(() => {
+                    step++;
+                    currentValue = Math.ceil(finalValue / totalSteps * step);
+                    this.achievementsValueDOM[i].innerText = currentValue;
+
+                    if (currentValue >= finalValue) {
+                        clearInterval(timer);
+                    }
+                }, 1000 / fps);
             }
         }
     }
