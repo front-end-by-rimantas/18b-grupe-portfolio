@@ -1,6 +1,6 @@
 class LanguagesSwitcher {
     constructor(params) {
-        this.activeLang = params.activeLang;
+        this.activeLang = localStorage.getItem('mitech-lang') || params.activeLang;
         this.imgPath = params.imgPath;
         this.langList = params.langList;
 
