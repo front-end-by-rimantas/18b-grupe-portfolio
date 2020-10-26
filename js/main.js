@@ -10,7 +10,9 @@ import { renderServices } from './components/services/renderServices.js';
 import { caseStudiesData } from './data/case-studies.js';
 import { CaseStudies } from './components/case-studies/CaseStudies.js';
 import { Carousel } from './components/carousel/Carousel.js';
-
+// achievements
+import { achievementsData } from './data/achievements.js';
+import { Achievements } from './components/achievements/Achievements.js';
 
 // header logic
 new Header(headerData);
@@ -24,3 +26,5 @@ new Carousel({
     renderEngine: CaseStudies,
     breakpoints: [800, 1100]
 });
+// achievements
+new Achievements(achievementsData);
